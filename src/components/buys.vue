@@ -99,15 +99,8 @@ export default {
         })
         .then(function (response) {
         // handle success
-          console.log(response)
+
           that.orders = response.data.orders
-        })
-        .catch(function (error) {
-        // handle error
-          console.log(error)
-        })
-        .then(function () {
-        // always executed
         })
     },
     buy () {

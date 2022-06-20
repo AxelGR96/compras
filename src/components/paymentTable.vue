@@ -111,13 +111,6 @@ export default {
           // handle success
           that.orders = response.data.orders
         })
-        .catch(function (error) {
-          // handle error
-          console.log(error)
-        })
-        .then(function () {
-          // always executed
-        })
     },
     closeModal () {
       this.isOpen = false
@@ -131,7 +124,6 @@ export default {
       this.order = Object.assign({}, row)
     },
     save (data) {
-      console.log(data)
       const sell = {
         number: data.sku,
         name: data.name,

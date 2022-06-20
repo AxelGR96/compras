@@ -263,7 +263,6 @@ export default {
   },
   mounted () {
     this.item = Object.assign({}, this.data)
-    console.log('item', this.item)
   }
 }
 </script>
