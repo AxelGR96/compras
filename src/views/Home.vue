@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex justify-center">
+    <div class="mt-5">
+      <img :src="logo" class="w-96 h-80" />
+    </div>
+
+  <div class="text-lg mt-5 ml-2 font-bold">
+    Sistema de Administración de Ordenes
   </div>
+
+  </div>
+
 </template>
 
 <script>
+
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+
+  data: () => ({
+    logo: require('../assets/digital.jpg')
+  })
 }
 </script>
