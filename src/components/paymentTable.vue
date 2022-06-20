@@ -82,6 +82,7 @@ import axios from 'axios'
 import CreateForm from './createForm.vue'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import global from './data'
 
 export default {
   name: 'Orders',
@@ -139,6 +140,7 @@ export default {
       if (data) {
         this.orders.push(sell)
         Swal.fire('Orden Creada con Exito', '', 'success')
+        global.orden = this.orders
       }
     },
     drop (id) {

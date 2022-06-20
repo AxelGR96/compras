@@ -232,6 +232,7 @@
         </div>
       </Dialog>
     </TransitionRoot>
+
   </div>
 </template>
 
@@ -257,6 +258,7 @@ export default {
     DialogTitle,
     TransitionRoot,
     TransitionChild
+
   },
   methods: {
     openModal () {

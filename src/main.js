@@ -14,4 +14,5 @@ library.add(fas)
 createApp(App).use(store).use(router)
   .component('fa', FontAwesomeIcon)
   .component('EasyDataTable', Vue3EasyDataTable)
+
   .mount('#app')

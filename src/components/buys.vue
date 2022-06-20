@@ -80,6 +80,7 @@
 import axios from 'axios'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import global from './data.vue'
 export default {
   data: () => ({
     token:
@@ -89,19 +90,25 @@ export default {
   }),
   methods: {
     ShowData () {
-      const that = this
-      axios
-        .get('https://eshop-deve.herokuapp.com/api/v2/orders', {
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: 'Bearer ' + this.token
-          }
-        })
-        .then(function (response) {
-        // handle success
+      console.log('item')
+      console.log(global.orden)
+      if (global.orden.length === 0) {
+        const that = this
+        axios
+          .get('https://eshop-deve.herokuapp.com/api/v2/orders', {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer ' + this.token
+            }
+          })
+          .then(function (response) {
+            // handle success
 
-          that.orders = response.data.orders
-        })
+            that.orders = response.data.orders
+          })
+      } else {
+        this.orders = global.orden
+      }
     },
     buy () {
       Swal.fire({
